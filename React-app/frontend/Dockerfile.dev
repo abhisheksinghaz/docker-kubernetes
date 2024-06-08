@@ -6,6 +6,8 @@ COPY package.json .
 
 RUN npm install
 
+# since docker-compose is pointing to the local files, we don't need to copy the files again
+# but keeping it anyways
 COPY . .
 
 CMD ["npm","run","start"]
